@@ -26,3 +26,20 @@ newDiv.textContent = "Hello, I'm new here!" ;
 document.body.appendChild(newDiv);
 
 --- innerHTML --> directly insert HTML
+
+
+3. Answer:
+
+Event Bubbling: When an event happens on an element, it first runs the handlers on that element, then bubbles up to its parent, then grandparent, and so on until the root (document).
+
+Example: A click on a <button> inside a <div> -> first the button’s event fires, then the div’s, then body, then document.
+
+
+4.Answer:
+
+Event Delegation: Instead of attaching an event to multiple child elements, attach it to a parent, and let events bubble up to that parent.
+
+Useful For:
+Fewer event listeners → better performance.
+
+Works for dynamically added elements.
