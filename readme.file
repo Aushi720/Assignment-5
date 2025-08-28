@@ -1,0 +1,28 @@
+1. Answer:
+
+ getElementById("id")
+--- selects only one element with the given id.
+--- returns a single element (or null if not found).
+
+. getElementByClassName("class")
+---selects all element with the given class.
+---returns a live HTMLCollection(updates if DOM changes).
+
+.querySelector("cssSelector")
+---selects the first element that matches a css selector.
+---returns a single element.
+
+.querySelectorAll("cssSelector")
+---selects all element that match a css selector.
+---returns a static NodeList(does not auto-update).
+
+
+2. Answer:
+
+--- create new element
+.let newDiv = document.createELement("div");
+newDiv.textContent = "Hello, I'm new here!" ;
+
+document.body.appendChild(newDiv);
+
+--- innerHTML --> directly insert HTML
