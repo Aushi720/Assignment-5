@@ -43,3 +43,19 @@ Useful For:
 Fewer event listeners → better performance.
 
 Works for dynamically added elements.
+
+
+5.Answer:
+
+preventDefault()
+-> Stops the default browser action.
+Example: Prevents form submission, stops link navigation.
+
+stopPropagation()
+-> Stops the event from bubbling up to parent elements.
+
+Often used together:
+form.addEventListener("submit", function(e) {
+  e.preventDefault();   // stop page reload
+  e.stopPropagation();  // stop bubbling
+});
