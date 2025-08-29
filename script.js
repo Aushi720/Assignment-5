@@ -16,10 +16,51 @@ loveBtns.forEach(btn => {
 //   return element;
 // }
 
-// document.getElementById("calling").addEventListener("click",function(){
-//   const title= getElement("cart-title").innerText;
-//   const subTittle= getElement("call-emergency").innerText;
-//   console.log(title,subTittle)
 
-//   const totalCalling = getElement("total-call").innerText;
-// })
+
+
+// Initial coins
+let coins = 100;
+
+// Get elements
+const coinElement =
+document.getElementById('coinCount');
+const callHistroyList = document.getElementById ('callHistory');
+const  clearHistoryBtn = document. getElementById('clearHistoryBtn');
+const callBtns = document.querySelectorAll('.callBtn');
+
+let history = [];
+// updates coin display
+function updateCoins(){
+  coinElement.textContent = coins;
+}
+
+// Renders call history
+
+
+// On call button click
+callBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const card = btn.closest('div[data-name]');
+        const serviceName = card.getAttribute('data-name');
+        const serviceNumber = card.getAttribute('data-number');
+        
+        if (coins < 20) {
+            alert('Not enough coins. You need at least 20 coins to make a call.');
+            return;
+        }
+
+        alert(`Calling ${serviceName} at number ${serviceNumber}`);
+        coins -= 20;
+        updateCoins();
+
+        history.push({name: serviceName, number: serviceNumber});
+        renderHistory();
+    });
+});
+
+// Clear history button
+clearHistoryBtn.addEventListener('click', function() {
+  
+});
+

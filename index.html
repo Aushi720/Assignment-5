@@ -21,11 +21,11 @@
                     <span  class="text-red-500">❤️</span>
                   <P><span id="heartCount">0</span></P>
                 </div>
-                <div class="flex items-center space-x-1 bg-gray-100 px-3 py-1 rounded-full">
+                <div id="coins" class="flex items-center space-x-1 bg-gray-100 px-3 py-1 rounded-full">
                     <img id="" class="w-6" src="./assets/coin.png">
                     <span id="coinCount">100</span>
                 </div>
-                <button class="bg-green-500 text-white px-4 py-2 rounded-full">2 Copy</button>
+                <button class="bg-green-500 text-white px-4 py-2   rounded-full">2 Copy</button>
             </div>
         </div>
     </div>
@@ -40,8 +40,8 @@
     </header>
     <!-- Main content area -->
     <main class="bg-green-50">
-    <div class="container mx-auto p-6 flex">
-        <section id="product-continer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
+    <div class="container  mx-auto p-6 flex">
+        <section id="serviceCards" class="grid  md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
 
             <!-- Card 1: National Emergency Number -->
              <section id="product-box" class="col-span-9"></section>
@@ -69,7 +69,7 @@
     </button>
  <button class="flex-1 flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-2xl hover:bg-green-600">
       <i class="fa-solid fa-phone"></i>                 
-<span id="calling">Call</span>
+<span class="callBtn">Call</span>
 </button>
 </div>
 </div>
@@ -311,20 +311,21 @@
 </button>
 </div>
 </div>
+</section>
 <!--Cart Box-->
-  <aside id="cart-box" class="col-span-3">
+  <aside id="cart-box" class="mb-10 mt-6">
  <!-- Call History Sidebar -->
         <div class="w-80 bg-white rounded-lg shadow-md p-6 ml-6">
             <div class="flex items-center justify-between mb-4 ">
-<h2 id="total-call" class="text-lg font-semibold flex items-center space-x-2 ">
+<h2 id="callHistoryBtn" class="text-lg font-semibold flex items-center space-x-2 ">
     <span><i class="fa-solid fa-clock"></i></span>Call History
 </h2>
-<button class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600">Clear</button>
+<button id="clearHistory" class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600">Clear</button>
             </div>
   </aside>
 
 
-        </section>
+       
       </div>
     </main>
     <footer>
